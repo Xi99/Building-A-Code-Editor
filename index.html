@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Socket.IO chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Code Editor</title>
     <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
 </link>
+<link>
     <style>
-      /* * {
+       {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -14,14 +16,22 @@
       body {
         font: 13px Helvetica, Arial;
         background-color: aqua;
-      } */
+      } 
       
     </style>
   </head>
   <body>
-    <div id="my-div">Test</div>
+    <div id="my-div"></div>
     <script type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js">
+</script>
+<script>
+    CodeMirror(document.querySelector("#my-div"), {
+  lineNumbers: true,
+  tabSize: 2,
+  value: 'console.log("Hello, World");',
+});
+
 </script>
   </body>
 </html>
