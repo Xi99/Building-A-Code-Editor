@@ -8,16 +8,29 @@
 </link>
 <link>
     <style>
-       {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
       body {
-        font: 13px Helvetica, Arial;
-        background-color: aqua;
+        font: 13px Helvetica, Arial ;
+        background-color: #0090DA;
+        color: #302E2B;
       } 
-      
+      .error-marker {
+        color: black;
+        width: 10px !important;
+        background-color: #ff0000;
+      }
+      .error-marker .error-message {
+        display: none;
+        position: absolute;
+        background-color: #ddd;
+        border: 1px solid #999;
+        padding: 6px;
+        width: 140px;
+        left: 15px;
+        top: -1em;
+      }
+      .error-marker:hover .error-message {
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -25,11 +38,18 @@
     <script type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js">
 </script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/javascript/javascript.min.js">
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/jshint/2.11.0/jshint.js">
+</script>
 <script>
     CodeMirror(document.querySelector("#my-div"), {
   lineNumbers: true,
   tabSize: 2,
   value: 'console.log("Hello, World");',
+  mode: 'javascript'
 });
 
 </script>
